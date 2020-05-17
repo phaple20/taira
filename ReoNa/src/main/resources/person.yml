@@ -7,7 +7,4 @@ person:
   dog:
     name: rubby
     age: 10
-  last-name: taira${random.uuid}
-server:
-  servlet:
-    context-path: /taira
+  last-name: tair
