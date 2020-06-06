@@ -8,6 +8,11 @@ person:
     name: rubby
     age: 10
   last-name: taira${random.uuid}
-server:
-  servlet:
-    context-path: /taira
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/page/
+      suffix: .jsp
+#server:
+#  servlet:
+#    context-path: /taira
