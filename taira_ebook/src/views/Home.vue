@@ -1,5 +1,7 @@
 <template>
   <div class="home">
+    <span class="icon-mobile"></span>
+    <span class="icon-good"></span>
     <div id="read"></div>
   </div>
 </template>
