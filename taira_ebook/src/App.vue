@@ -1,21 +1,26 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <!--<div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <p class="text">Hi</p>
+    <p class="text">Hi</p>-->
     <router-view/>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
-    mounted () {
-        this.$store.dispatch('setTest', 98).then(() => {
-            console.log(this.$store.state.test)
-        })
-    }
+  computed: {
+    ...mapGetters(['test'])
+  },
+  mounted () {
+      this.$store.dispatch('setTest', 98).then(() => {
+          console.log(this.$store.state.book.test)
+      })
+  }
 }
 document.addEventListener('DOMContentLoaded', () => {
     const html = document.querySelector('html')

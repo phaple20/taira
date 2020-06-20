@@ -35,17 +35,17 @@ export default {
     name: 'Home',
     computed: {
         num() {
-            return this.$store.state.num
+            return this.$store.state.book.num
         }
     },
     data() {
         return {
-            name: this.$store.state.name
+            name: this.$store.state.book.name
             // num: this.$store.state.num
         }
     },
     mounted () {
-        console.log(this.$store.state.name)
+        console.log(this.$store.state.book.name)
         this.book = new Epub('/shzdtzx.epub')
         this.book.renderTo('read', {
             width: window.innerWidth / 1.5,
