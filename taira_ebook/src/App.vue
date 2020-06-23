@@ -17,7 +17,7 @@ export default {
     ...mapGetters(['test'])
   },
   mounted () {
-      this.$store.dispatch('setTest', 98).then(() => {
+      this.$store.dispatch('setTest', Math.random()*100).then(() => {
           console.log(this.$store.state.book.test)
       })
   }

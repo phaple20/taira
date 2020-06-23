@@ -11,6 +11,7 @@
 <script>
 // @ is an alias to /src
 import Epub from 'epubjs'
+import '../study/syntax'
 
 // 2s 之后返回双倍的值
 function doubleAfter2seconds(num) {
