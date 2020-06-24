@@ -18,7 +18,7 @@ function doubleAfter2seconds(num) {
   //成功用resolve，失败用reject
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            console.log(num);
+            //console.log(num);
             resolve(2 * num)
         }, 2000);
     } )
