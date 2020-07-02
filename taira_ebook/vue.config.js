@@ -37,8 +37,37 @@ module.exports = {
             // subpage: 'src/subpage/userRecharge_index.js'
         },
     },
-    lintOnSave: false,
-    publicPath: process.env.NODE_ENV === 'production'
-        ? './'
-        : '/'
+    devServer: {
+        //open: true,
+        host: '10.1.1.56',
+        port: '8080',
+        https: false,
+        overlay: {
+            warnings: false,
+            errors: true
+        },
+        proxy: {
+            // 配置多个代理(配置一个 proxy: 'http://localhost:4000' )
+            /*'/Index': {
+              target: 'http://m.aniu.tv/Index', // 代理地址
+              changeOrigin: true,
+              pathRewrite: {
+                '^/Index': '' // 将 /wxaniu 替换掉
+              }
+            },*/
+            '/api': {
+              target: 'http://zjtapi.dzcj.tv:8083/aniuapi', // 代理地址
+              changeOrigin: true,
+              ws: true,
+              pathRewrite: {
+                '^/api': 'api' // 将 /api 替换掉
+              }
+            },
+        }
+    }
+
+    // lintOnSave: false,
+    // publicPath: process.env.NODE_ENV === 'production'
+    //     ? './'
+    //     : '/'
 }
