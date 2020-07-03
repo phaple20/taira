@@ -39,17 +39,16 @@ axios.interceptors.request.use(
     });
     
 export function get(url, params) {
-    console.log(1111111111)
+    console.log(">-------http_get------<")
     return new Promise((resolve, reject) => {
         axios.get(url, { params: params })
             .then(res => {
-                console.log(res.status)
+                console.log("Http_get_status:" + res.status)
                 switch(res.status) {
                     case 200:
                         if(res.data != "") resolve(res.data)
                         break;
                 }
-                console.log(res)
             })
             .catch(err => {
                 reject(err.data);

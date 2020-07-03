@@ -42,19 +42,20 @@ module.exports = {
         host: '10.1.1.56',
         port: '8080',
         https: false,
+        //浏览器上全屏显示编译的errors或warnings
         overlay: {
             warnings: false,
             errors: true
         },
-        proxy: {
+        /*proxy: {
             // 配置多个代理(配置一个 proxy: 'http://localhost:4000' )
-            /*'/Index': {
+            '/Index': {
               target: 'http://m.aniu.tv/Index', // 代理地址
               changeOrigin: true,
               pathRewrite: {
                 '^/Index': '' // 将 /wxaniu 替换掉
               }
-            },*/
+            },
             '/api': {
               target: 'http://zjtapi.dzcj.tv:8083/aniuapi', // 代理地址
               changeOrigin: true,
@@ -63,7 +64,7 @@ module.exports = {
                 '^/api': 'api' // 将 /api 替换掉
               }
             },
-        }
+        }*/
     }
 
     // lintOnSave: false,
