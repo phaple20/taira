@@ -5,9 +5,14 @@
                 @scroll="$_onScroll">
                 <ol>
                     <li v-for="(item,index) in CourseData" :key="index">
-                        <md-field>
+                        <md-field class="course_list_text">
                             <md-cell-item :title="item.title" :brief="item.subContent"></md-cell-item>
-                            
+                            <div class="course_list_pic" :style="{
+                                backgroundImage:'url('+item.image+')',
+                                backgroundRepeat:'no-repeat',
+                                backgroundPosition:'center center',
+                                backgroundSize: 'cover',
+                                overflow: 'hidden'}">></div>
                         </md-field>
                     </li>
                 </ol>
@@ -92,4 +97,10 @@
         font-family: DINAlternate-Bold;
         border-bottom: .5px solid #efefef;
     }
+
+    .course_list_text {
+
+    }
+
+
 </style>
