@@ -39,7 +39,7 @@ module.exports = {
     },
     devServer: {
         //open: true,
-        host: '10.1.1.56',
+        host: 'localhost',
         port: '8080',
         https: false,
         //浏览器上全屏显示编译的errors或warnings
