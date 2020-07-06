@@ -1,6 +1,6 @@
 const book = {
-    fileName: state => state.book.fileName,
-    menuVisible: state => state.book.menuVisible
+  fileName: state => state.book.fileName,
+  menuVisible: state => state.book.menuVisible
 }
 
-export default book;
+export default book

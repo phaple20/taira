@@ -16,19 +16,21 @@
               <md-cell-item
                 :title="item.title"
                 :brief="item.subContent"
-              ></md-cell-item>
-              <div
-                class="course_list_pic"
-                :style="{
-                  backgroundImage: 'url(' + item.image + ')',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'center center',
-                  backgroundSize: 'cover',
-                  overflow: 'hidden',
-                }"
+                disabled
+                arrow
               >
-                >
-              </div>
+                <div
+                  class="holder"
+                  slot="left"
+                  :style="{
+                    backgroundImage: 'url(' + item.image + ')',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center center',
+                    backgroundSize: 'cover',
+                    overflow: 'hidden',
+                  }"
+                ></div>
+              </md-cell-item>
             </md-field>
           </li>
         </ol>
@@ -106,6 +108,11 @@ body {
   border-bottom: 0.5px solid #efefef;
 }
 
-.course_list_text {
+.holder {
+  display: block;
+  width: 88px;
+  height: 88px;
+  border-radius: 44px;
+  background-color: #e6e6e6;
 }
 </style>
